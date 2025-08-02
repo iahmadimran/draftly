@@ -14,6 +14,7 @@
     "@radix-ui/react-slot": "^1.2.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "jsm-editor": "^0.0.12",
     "lucide-react": "^0.536.0",
     "next": "15.4.5",
     "react": "19.1.0",
@@ -21,7 +22,15 @@
     "react-hook-form": "^7.62.0",
     "tailwind-merge": "^3.3.1",
     "tailwindcss-animate": "^1.0.7",
-    "zod": "^4.0.14"
+    "zod": "^4.0.14",
+    "lexical": "0.16.1",
+    "@lexical/react": "0.16.1",
+    "@lexical/utils": "0.16.1",
+    "@lexical/rich-text": "0.16.1",
+    "@lexical/selection": "0.16.1",
+    "@lexical/clipboard": "0.16.1",
+    "@lexical/html": "0.16.1",
+    "@lexical/list": "0.16.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
