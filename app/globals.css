@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -28,6 +29,7 @@
     color: var(--foreground);
     font-synthesis-weight: none;
     text-rendering: optimizeLegibility;
+    font-family: Poppins;
   }
 
   .custom-scrollbar::-webkit-scrollbar {
@@ -233,7 +235,7 @@
     align-items: center;
     margin-bottom: 40px;
     width: 100%;
-    gap: 40px;
+    gap: 34px;
     padding: 0 20px;
   }
 
@@ -253,7 +255,7 @@
     border-radius: 8px;
     background: var(--doc-bg, theme(colors.slate.800));
     background-size: cover;
-    padding: 20px;
+    padding: 16px 20px;
     box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
   }
 

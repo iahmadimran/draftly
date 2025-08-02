@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter as FontSans } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import {
   ClerkProvider,
@@ -7,9 +7,11 @@ import {
 import { dark } from '@clerk/themes'
 import Provider from "./Provider";
 
-const fontSans = FontSans({
-  variable: "--font-sans",
-  subsets: ["latin"],
+const fontPoppins = Poppins({
+  variable: "--font-poppins",
+  weight: ["100", '200', '300', "400", '500', '600', "700", '800', '900'],
+  subsets: ['latin'], // Add this - required for Google Fonts
+  display: 'swap', // Add this for better performance
 });
 
 export const metadata: Metadata = {
@@ -34,7 +36,8 @@ export default function RootLayout({
     >
       <html lang="en">
         <body
-          className={`${fontSans.variable} antialiased font-sans`}
+          className={`${fontPoppins.variable} antialiased`}
+          style={{ fontFamily: 'var(--font-poppins)' }}
         >
           <Provider>
             {children}
