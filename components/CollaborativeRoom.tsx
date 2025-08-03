@@ -102,7 +102,7 @@ const CollaborativeRoom = ({ roomId, roomMetadata, users, currentUserType }: Col
 
               {loading && <p className="text-sm text-gray-400">Saving...</p>}
             </div>
-            <div className='w-full flex flex-1 justify-end gap-2 sm:gap-4'>
+            <div className='w-fit flex flex-1 justify-end gap-2 sm:gap-4'>
               <ActiveCollaborators />
               <SignedOut>
                 <SignInButton />

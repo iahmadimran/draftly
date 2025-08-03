@@ -30,6 +30,16 @@ declare type User = {
   userType?: UserType;
 };
 
+declare type ClerkUser = {
+  id: string;
+  firstName: string;
+  lastName: string;
+  emailAddress: string;
+  imageUrl: string;
+};
+
+
+
 declare type ShareDocumentParams = {
   roomId: string;
   email: string;

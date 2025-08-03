@@ -335,7 +335,7 @@
     display: none;
     align-items: center;
     justify-content: flex-end;
-    overflow: hidden;
+    overflow: visible;
   }
 
   .collaborators-list > * {
