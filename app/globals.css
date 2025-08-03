@@ -7,6 +7,7 @@
 
 @import "../styles/dark-theme.css";
 
+
 /* ========================================== TAILWIND STYLES */
 @layer base {
   :root {
@@ -140,6 +141,28 @@
     border: none;
     background: theme(colors.slate.800);
     box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  }
+
+  .shad-popover .lb-root,
+  .shad-popover .lb-root *,
+  .shad-popover .lb-inbox-notification,
+  .shad-popover .lb-inbox-notification *,
+  .shad-popover .lb-inbox-notification-text-mention,
+  .shad-popover .lb-inbox-notification-text-mention *,
+  .shad-popover .lb-inbox-notification-thread,
+  .shad-popover .lb-inbox-notification-thread *,
+  .shad-popover .lb-comment-body,
+  .shad-popover .lb-comment-content,
+  .shad-popover [data-liveblocks-inbox-notification],
+  .shad-popover [data-liveblocks-inbox-notification] * {
+    color: white !important;
+  }
+
+  .shad-popover .lb-inbox-notification-text,
+  .shad-popover .lb-inbox-notification-content,
+  .shad-popover .lb-inbox-notification-title,
+  .shad-popover .lb-inbox-notification-subtitle {
+    color: white !important;
   }
 
   .floating-toolbar {

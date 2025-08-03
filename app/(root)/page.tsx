@@ -1,6 +1,7 @@
 import AddDocumentBtn from '@/components/AddDocumentBtn';
 import { DeleteModal } from '@/components/DeleteModal';
 import Header from '@/components/Header'
+import Notifications from '@/components/Notifications';
 import { getDocuments } from '@/lib/actions/room.action';
 import { dateConverter } from '@/lib/utils';
 import { SignedIn, UserButton } from '@clerk/nextjs'
@@ -20,7 +21,7 @@ async function page() {
     <main className='home-container'>
       <Header className='sticky top-0 left-0'>
         <div className='flex items-center gap-2 lg:gap-4'>
-          Notifications
+          <Notifications />
           <SignedIn>
             <UserButton />
           </SignedIn>
@@ -37,7 +38,8 @@ async function page() {
             />
           </div>
           <ul className='document-ul'>
-            {roomDocuments.data.map(({ id, metadata, createdAt }) => (
+          {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+            {roomDocuments.data.map(({ id, metadata, createdAt }: { id: any, metadata: any, createdAt: any}) => (
               <li key={id} className='document-list-item'>
                 <Link href={`/documents/${id}`} className='flex flex-1 items-center gap-4'>
                   <div className='hidden rounded-md bg-[#2E3D5B] p-2 sm:block'>
