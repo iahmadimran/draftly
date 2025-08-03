@@ -1,4 +1,5 @@
 import AddDocumentBtn from '@/components/AddDocumentBtn';
+import { DeleteModal } from '@/components/DeleteModal';
 import Header from '@/components/Header'
 import { getDocuments } from '@/lib/actions/room.action';
 import { dateConverter } from '@/lib/utils';
@@ -11,9 +12,7 @@ import React from 'react'
 
 async function page() {
   const clerkUser = await currentUser();
-  if (!clerkUser) {
-    redirect('/sign-in')
-  }
+  if (!clerkUser) redirect('/sign-in');
 
   const roomDocuments = await getDocuments(clerkUser.emailAddresses[0].emailAddress);
 
@@ -54,6 +53,7 @@ async function page() {
                     <p className='text-sm font-light text-[#B4C6EE]'>Created about {dateConverter(createdAt)}</p>
                   </div>
                 </Link>
+                <DeleteModal roomId={id} />
               </li>
             ))}
           </ul>

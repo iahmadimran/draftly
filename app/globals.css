@@ -352,7 +352,7 @@
     height: 44px;
     flex: 1;
     border: none;
-    background: theme(colors.slate.600);
+    background: #475569;
   }
 
   .share-input:focus-visible {

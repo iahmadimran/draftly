@@ -22,20 +22,20 @@ async function page({ params: { id } }: SearchParamProps) {
   const userIds = Object.keys(room.usersAccesses);
   const users = await getClerkUsers({ userIds })
 
-  const usersData = users?.map((user: User) => ({
+  const usersData = users.map((user: User) => ({
     ...user,
-    userType: room.usersAccesses[user.email]?.includes('room:write')
-     ? 'editor'
-     : 'viewer'
+    userType: room.usersAccesses[user?.email]?.includes('room:write')
+      ? 'editor'
+      : 'viewer'
   }))
 
   const currentUserType = room.usersAccesses[clerkUser.emailAddresses[0].emailAddress]?.includes('room:write')
-     ? 'editor'
-     : 'viewer';
+    ? 'editor'
+    : 'viewer';
 
   return (
     <main className="flex flex-col w-full items-center">
-      <CollaborativeRoom 
+      <CollaborativeRoom
         roomId={id}
         roomMetadata={room.metadata}
         users={usersData}
